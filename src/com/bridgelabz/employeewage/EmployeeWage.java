@@ -9,14 +9,16 @@ public class EmployeeWage {
     static final int PART_TIME_HOUR = 4;
     static final int WORKING_DAY_PER_MONTH = 20;
     static final int TOTAL_WORK_HOUR = 100;
-    static int totalHours = 0;
-    static int day = 0;
-    static int totalWage = 0;
-    static int dailyWage=0;
 
 
-    public static void main(String[] args) {
+    static void calculateWage(){
         System.out.println("Welcome to Employee Wage Computation");
+         int totalHours = 0;
+         int day = 0;
+         int totalWage = 0;
+         int dailyWage=0;
+
+
 
         while((totalHours< TOTAL_WORK_HOUR) && (day<WORKING_DAY_PER_MONTH )){
             int attendance = (int)(Math.floor(Math.random()*10))%3;
@@ -42,5 +44,9 @@ public class EmployeeWage {
         System.out.println("Total work days are: "+day);
         System.out.println("Total wage is: "+totalWage);
 
+    }
+
+    public static void main(String[] args) {
+        calculateWage();
     }
 }
